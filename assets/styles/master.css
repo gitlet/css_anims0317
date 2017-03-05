@@ -27,7 +27,10 @@ body {
           width: 140px;
           background: rgba(80, 31, 31, 0.43);
           position: absolute;
-          top: 0; }
+          top: 0;
+          -webkit-animation: sliding-pane 10s infinite;
+          animation: sliding-pane 10s infinite;
+          transition: animation ease 0.5s; }
   body .wrapper {
     position: relative;
     top: 20px;
