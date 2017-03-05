@@ -1,0 +1,110 @@
+* {
+  margin: auto;
+  padding: 0; }
+
+body {
+  font-family: "Raleway", sans-serif; }
+  body header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: yellow;
+    margin: 0; }
+    body header a {
+      text-decoration: none;
+      color: inherit; }
+      body header a h1 {
+        text-align: center;
+        color: black;
+        padding: 40px;
+        font-size: 60px;
+        letter-spacing: 4px;
+        font-weight: bold; }
+        body header a h1::before {
+          content: "";
+          height: 100%;
+          width: 140px;
+          background: rgba(80, 31, 31, 0.43);
+          position: absolute;
+          top: 0; }
+  body .wrapper {
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    background: coral;
+    height: auto;
+    width: 300px; }
+    body .wrapper a {
+      text-decoration: none;
+      color: #000;
+      font-size: 28px; }
+    body .wrapper:hover {
+      -webkit-animation: scale3D 5s infinite;
+      animation: scale3D 5s infinite; }
+  body .css-pers {
+    position: relative;
+    top: 20px;
+    height: 240px;
+    width: 240px;
+    margin: 5px auto;
+    padding: 5px;
+    background: #e9967a;
+    -webkit-perspective: 200px;
+    perspective: 200px; }
+    body .css-pers .insider {
+      position: absolute;
+      background: coral;
+      padding: 60px;
+      -webkit-transform: rotateX(45deg);
+      transform: rotateX(45deg);
+      color: ghostwhite;
+      font-weight: bold;
+      letter-spacing: 5px; }
+
+@-webkit-keyframes sliding-pane {
+  0% {
+    transform: translateX(0px);
+    transition: transform ease 1s;
+    background: rgba(80, 31, 31, 0.43); }
+  50% {
+    transform: translateX(515px);
+    transition: transform ease 1s;
+    background: rgba(232, 18, 18, 0.43); }
+  100% {
+    transform: translateX(0px);
+    transition: transform ease 1s;
+    background: rgba(80, 31, 31, 0.43); } }
+@keyframes sliding-pane {
+  0% {
+    transform: translateX(0px);
+    transition: transform ease 1s;
+    background: rgba(80, 31, 31, 0.43); }
+  50% {
+    transform: translateX(515px);
+    transition: transform ease 1s;
+    background: rgba(232, 18, 18, 0.43); }
+  100% {
+    transform: translateX(0px);
+    transition: transform ease 1s;
+    background: rgba(80, 31, 31, 0.43); } }
+@-webkit-keyframes scale3D {
+  0% {
+    transform: scale3d(1.2, 1.2, 1);
+    transition: transform ease 0.5s; }
+  100% {
+    transform: scale3d(1, 1, 1);
+    background: pink;
+    transition: transform ease 0.5s; } }
+@keyframes scale3D {
+  0% {
+    transform: scale3d(1.2, 1.2, 1);
+    transition: transform ease 0.5s; }
+  100% {
+    transform: scale3d(1, 1, 1);
+    background: pink;
+    transition: transform ease 0.5s; } }
+
+/*# sourceMappingURL=master.css.map */

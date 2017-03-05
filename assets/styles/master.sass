@@ -1,0 +1,162 @@
+// importing bourbon
+@import "bourbon/bourbon"
+// initial reset
+*
+  margin: auto
+  padding: 0
+body
+  font-family: 'Raleway', sans-serif
+  header
+    position: relative
+    top: 0
+    left: 0
+    right: 0
+    background: yellow
+    margin: 0
+    a
+      text-decoration: none
+      color: inherit
+      h1
+        text-align: center
+        color: black
+        padding: 40px
+        font-size: 60px
+        letter-spacing: 4px
+        font-weight: bold
+        &::before
+          content: ""
+          @include size(140px 100%)
+          background: rgba(80, 31, 31, 0.43)
+          position: absolute
+          top: 0
+          // padding: 10px
+          // -webkit-animation: sliding-pane 10s infinite
+          // animation: sliding-pane 10s infinite
+          // transition: animation ease .5s
+  .wrapper
+    position: relative
+    top: 20px
+    margin: 0 auto
+    padding: 10px
+    text-align: center
+    background: coral
+    @include size(300px auto)
+    a
+      text-decoration: none
+      color: #000
+      font-size: 28px
+    &:hover
+      // -webkit-animation: flipper 2s infinite
+      // animation: flipper 2s infinite
+      // transform: rotateX(180deg)
+      // transform: scale3d(1.2, 1.2, 1)
+      // transition: transform ease .5s
+      -webkit-animation: scale3D 5s infinite
+      animation: scale3D 5s infinite
+
+  .css-pers
+    position: relative
+    top: 20px
+    @include size(240px)
+    margin: 5px auto
+    padding: 5px
+    background: #e9967a
+    -webkit-perspective: 200px
+    perspective: 200px
+    .insider
+      position: absolute
+      background: coral
+      padding: 60px
+      -webkit-transform: rotateX(45deg)
+      transform: rotateX(45deg)
+      color: ghostwhite
+      font-weight: bold
+      letter-spacing: 5px
+
+
+
+// ............. works! ....................
+// .mouseenter-class
+//   transform: rotateX(180deg)
+//   transition: transform ease 1.5s
+// .mouseleave-class
+//   transform: rotateX(360deg)
+//   transition: transform ease 1.5s
+// ------------------------------ animations ------------------------------ //
+@-webkit-keyframes sliding-pane
+  0%
+    transform: translateX(0px)
+    transition: transform ease 1s
+    background: rgba(80, 31, 31, 0.43)
+    // transform-origin: left
+  50%
+    transform: translateX(515px)
+    transition: transform ease 1s
+    background: rgba(232, 18, 18, 0.43)
+  100%
+    transform: translateX(0px)
+    transition: transform ease 1s
+    background: rgba(80, 31, 31, 0.43)
+
+@keyframes sliding-pane
+  0%
+    transform: translateX(0px)
+    transition: transform ease 1s
+    background: rgba(80, 31, 31, 0.43)
+    // transform-origin: left
+  50%
+    transform: translateX(515px)
+    transition: transform ease 1s
+    background: rgba(232, 18, 18, 0.43)
+  100%
+    transform: translateX(0px)
+    transition: transform ease 1s
+    background: rgba(80, 31, 31, 0.43)
+
+// ------------------ flipper ------------------
+// @-webkit-keyframes flipper
+//   0%
+//     transform: rotateX(0deg)
+//     transition: transform ease 1s
+//     background: coral
+//     // transform-origin: left
+//   50%
+//     transform: rotateX(180deg)
+//     transition: transform ease 1s
+//     background: pink
+//   100%
+//     transform: rotateX(360deg)
+//     transition: transform ease 1s
+//     background: coral
+// @keyframes flipper
+//   0%
+//     transform: rotateX(0deg)
+//     transition: transform ease 1s
+//     background: coral
+//     // transform-origin: left
+//   50%
+//     transform: rotateX(180deg)
+//     transition: transform ease 1s
+//     background: pink
+//   100%
+//     transform: rotateX(360deg)
+//     transition: transform ease 1s
+//     background: coral
+
+// ................. scale3D ......................
+@-webkit-keyframes scale3D
+  0%
+    transform: scale3d(1.2, 1.2, 1)
+    transition: transform ease .5s
+  100%
+    transform: scale3d(1, 1, 1)
+    background: pink
+    transition: transform ease .5s
+@keyframes scale3D
+  0%
+    transform: scale3d(1.2, 1.2, 1)
+    transition: transform ease .5s
+  100%
+    transform: scale3d(1, 1, 1)
+    background: pink
+    transition: transform ease .5s
